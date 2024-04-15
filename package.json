@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "bin": {
-  "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Farid-keltuzed/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Farid-keltuzed/frontend-project-44/actions)",
@@ -16,5 +16,8 @@
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
