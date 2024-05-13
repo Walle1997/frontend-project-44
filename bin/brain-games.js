@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import showWelcomeMessage from '../src/cli.js';
+import getUserHello from '../src/cli.js';
 
-showWelcomeMessage();
+console.log(getUserHello());

@@ -1,10 +1,8 @@
-import readlineSync from 'readline-sync';
+import { getQuestion } from './helpers.js';
 
-const showWelcomeMessage = () => {
+const UserHello = () => {
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-
-  console.log(`Hello, ${userName}!`);
+  const name = getQuestion('May I have your name? ');
+  return `Hello, ${name}!`;
 };
-
-export default showWelcomeMessage;
+export default UserHello;
