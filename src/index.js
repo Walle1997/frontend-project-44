@@ -1,12 +1,6 @@
 import readlineSync from 'readline-sync';
 import getRandomInt from './utils.js';
-
-const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
+import showWelcomeMessage from './cli.js';
 
 const getRandomProgression = (length) => {
   const num = Math.round(Math.random() * length);
@@ -123,7 +117,7 @@ const makeTask = (gameType) => {
 };
 
 export default (gameType, question) => {
-  const userName = greeting();
+  const userName = showWelcomeMessage();
   console.log(question);
 
   let answersCount = 0;
