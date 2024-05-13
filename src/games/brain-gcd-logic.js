@@ -1,10 +1,12 @@
+/* eslint-disable import/extensions */
+
 import gameEngine from '../index.js';
 
 const brainGCD = () => {
-    const type = 'GCD';
-    const question = 'Find the greatest common divisor of given numbers.';
+  const gameType = 'GCD';
+  const question = 'Find the greatest common divisor of given numbers.';
 
-    gameEngine(gameType, question);
+  gameEngine(gameType, question);
 };
 
 export default brainGCD;
