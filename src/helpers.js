@@ -4,7 +4,7 @@ const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min 
 
 const getQuestion = (description) => readlineSync.question(description);
 
-const getNod = (a, b) => {
+const getGCD = (a, b) => {
   let t = a;
   let c = b;
   while (t !== c) {
@@ -43,5 +43,5 @@ function getRandomPrime(randomNum) {
 }
 
 export {
-  getNod, getProgressionRandom, getRandomPrime, getQuestion, getRandom,
+  getGCD, getProgressionRandom, getRandomPrime, getQuestion, getRandom,
 };
