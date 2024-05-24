@@ -10,24 +10,21 @@ function calcData() {
   const random2 = getRandom();
   const randomOperator = answers[getRandom(0, answers.length - 1)].slice(0, 1);
   const question = `${random} ${randomOperator} ${random2}`;
-  // eslint-disable-next-line no-use-before-define
   const answer = calculateAnswer(random, random2, randomOperator);
   return [question, answer];
-};
+}
 
-const calculateAnswer = (randomOperator, random, random2, answer) => {
+// eslint-disable-next-line no-shadow
+function calculateAnswer(randomOperator, random, random2, answer) {
   if (randomOperator === '+') {
-    // eslint-disable-next-line no-param-reassign
     answer = random + random2;
   } else if (randomOperator === '-') {
-    // eslint-disable-next-line no-param-reassign
     answer = random - random2;
   } else if (randomOperator === '*') {
-    // eslint-disable-next-line no-param-reassign
     answer = random * random2;
   }
   return answer;
-};
+}
 
 export default function startCalcGame() {
   startGame(descriptionGame, calcData);
