@@ -1,7 +1,17 @@
 import startGame from '../index.js';
-import {
-  getProgressionRandom, getRandom,
-} from '../helpers.js';
+import { getRandom } from '../helpers.js';
+
+const getProgressionRandom = (a, b) => {
+  let n = 1;
+  let elementProgression = a + b;
+  const result = [a, elementProgression];
+  while (n < 9) {
+    elementProgression += b;
+    result.push(elementProgression);
+    n += 1;
+  }
+  return result;
+};
 
 const descriptionGame = 'What number is missing in the progression?';
 const progressionData = () => {

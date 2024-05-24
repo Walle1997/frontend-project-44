@@ -1,16 +1,30 @@
 import startGame from '../index.js';
-import { getRandom, getRandomPrime } from '../helpers.js';
+import { getRandom } from '../helpers.js';
 
-const descriptionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const primeData = () => {
-  const question = getRandom(2);
-  const indexPrime = getRandomPrime(question);
-  if (indexPrime === 0) {
-    return [question, 'yes'];
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const minRange = 0;
+const maxRange = 100;
+
+const isPrime = (number) => {
+  const limit = Math.sqrt(number);
+  if (number <= 1) {
+    return false;
   }
-
-  return [question, 'no'];
+  for (let i = 2; i <= limit; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 };
-export default function startPrimeGame() {
-  startGame(descriptionGame, primeData);
-}
+
+const generateRound = () => {
+  const number = getRandom(minRange, maxRange);
+  const question = number.toString();
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
+  return [question, correctAnswer];
+};
+
+export default () => {
+  startGame(description, generateRound);
+};

@@ -1,7 +1,20 @@
 /* eslint-disable import/extensions */
 
 import startGame from '../index.js';
-import { getGcd, getRandom } from '../helpers.js';
+import { getRandom } from '../helpers.js';
+
+function getGcd(a, b) {
+  let t = a;
+  let c = b;
+  while (t !== c) {
+    if (t > c) {
+      t -= c;
+    } else {
+      c -= t;
+    }
+  }
+  return t;
+};
 
 const descriptionGame = 'Find the greatest common divisor of given numbers.';
 const gcdData = () => {
