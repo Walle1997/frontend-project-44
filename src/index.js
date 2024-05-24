@@ -1,8 +1,8 @@
 import { getQuestion } from './helpers.js';
 
-export default function startGame(descriptionGame, getGame) {
-  const countIterations = 3;
+const countIterations = 3;
 
+export default function startGame(descriptionGame, getGame) {
   console.log('Welcome to the Brain Games!');
   const name = getQuestion('May I have your name? ');
   console.log(`Hello, ${name}!`);

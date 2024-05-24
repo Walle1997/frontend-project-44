@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 import readlineSync from 'readline-sync';
 
 const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 const getQuestion = (description) => readlineSync.question(description);
 
-
-const getNod = (a, b) => {
+function getGcd(a, b) {
   let t = a;
   let c = b;
   while (t !== c) {
@@ -43,5 +44,5 @@ function getRandomPrime(randomNum) {
 }
 
 export {
-  getNod, getProgressionRandom, getQuestion, getRandomPrime, getRandom,
+  getGcd, getProgressionRandom, getQuestion, getRandomPrime, getRandom,
 };
