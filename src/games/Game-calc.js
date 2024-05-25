@@ -1,3 +1,4 @@
+import { question } from 'readline-sync';
 import { getRandom } from '../helpers.js';
 import startGame from '../index.js';
 
@@ -11,19 +12,16 @@ function calcData() {
   const randomOperator = answers[getRandom(0, answers.length - 1)].slice(0, 1);
   const question = `${random} ${randomOperator} ${random2}`;
   const answer = calculateAnswer(random, random2, randomOperator);
-  return [question, answer];
+  return [question, String(answer)];
 }
 
-// eslint-disable-next-line no-shadow
-function calculateAnswer(randomOperator, random, random2, answer) {
+function calculateAnswer(random, random2, randomOperator) {
   if (randomOperator === '+') {
-    answer = random + random2;
-  } else if (randomOperator === '-') {
-    answer = random - random2;
-  } else if (randomOperator === '*') {
-    answer = random * random2;
+    return random + random2;
+  } if (randomOperator === '-') {
+    return random - random2;
   }
-  return answer;
+  return random * random2;
 }
 
 export default function startCalcGame() {
