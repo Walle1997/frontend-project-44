@@ -31,3 +31,5 @@ function calculateAnswer(random, random2, randomOperator) {
 export default function startCalcGame() {
   startGame(descriptionGame, calcData);
 }
+
+fdkghfdkg
