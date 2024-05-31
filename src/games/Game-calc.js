@@ -16,12 +16,16 @@ function calcData() {
 }
 
 function calculateAnswer(random, random2, randomOperator) {
-  if (randomOperator === '+') {
-    return random + random2;
-  } if (randomOperator === '-') {
-    return random - random2;
+  switch (randomOperator) {
+    case '+':
+      return random + random2;
+    case '-':
+      return random - random2;
+    case '*':
+      return random * random2;
+    default:
+      throw new Error(`There is no such operator like '${randomOperator}'!`);
   }
-  return random * random2;
 }
 
 export default function startCalcGame() {
