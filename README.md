@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/fa79140709a0bccbd735/maintainability)](https://codeclimate.com/github/Walle1997/frontend-project-44/maintainability)
+[![Actions Status](https://github.com/Walle1997/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https:/github.com/Walle1997/frontend-project-44/actions/)[![Maintainability](https://api.codeclimate.com/v1/badges/fa79140709a0bccbd735/maintainability)](https://codeclimate.com/github/Walle1997/frontend-project-44/maintainability)
 
 
 # "Brain Games"
