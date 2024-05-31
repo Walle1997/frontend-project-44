@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-
 import startGame from '../index.js';
 import { getRandom } from '../helpers.js';
 
