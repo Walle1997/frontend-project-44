@@ -4,4 +4,4 @@ import startCalcGame from '../src/games/Game-calc.js';
 
 startCalcGame();
 
-ghbdtn
+
