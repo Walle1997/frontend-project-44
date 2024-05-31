@@ -32,4 +32,3 @@ export default function startCalcGame() {
   startGame(descriptionGame, calcData);
 }
 
-fdkghfdkg
